@@ -6,4 +6,11 @@ services:
       volumes:
         - ./web:/app
       ports:
-        - 80:3000
+        - 8080:3000
+
+    front-db:
+      image: mysql:5.7.33
+      environment:
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      ports:
+        - 8083:3306
