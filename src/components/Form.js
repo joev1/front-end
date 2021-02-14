@@ -13,6 +13,20 @@ class Form extends React.Component {
     handleSubmit(event) {
         alert('Registration for user ' + this.state.value + ' completed.' );
         event.preventDefault();
+        const data = new FormData(event.target)
+        fetch(process.env.REACT_APP_API_URL + '/post', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: data
+        }).then(() =>
+        {
+            console.log("sent!");
+        }).catch(() =>
+        {
+            console.log("fail!");
+        })
     }
 
     render() {
