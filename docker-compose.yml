@@ -2,15 +2,8 @@ version: '3.6'
 services:
     web:
       build:
-        context: web
+        context: .
       volumes:
-        - ./web:/app
+        - ./:/app
       ports:
         - 8080:3000
-
-    front-db:
-      image: mysql:5.7.33
-      environment:
-        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      ports:
-        - 8083:3306

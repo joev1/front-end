@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -42,10 +41,14 @@
 }
 
 .form {
-  margin: 20px;
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.input {
+.formInput {
 border: 1px solid #cccccc;
 border-radius: 3px;
 -webkit-border-radius: 3px;
@@ -56,4 +59,6 @@ height: 32px;
 width: 200px;
 color: #000000;
 font-size: 14px;
+padding: 12px 20px;
+margin: 8px 0;
 }
