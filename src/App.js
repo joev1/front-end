@@ -1,5 +1,7 @@
-import './App.css';
-import Form from "./components/Form";
+import './css/App.css';
+import './css/Button.css';
+import './css/Form.css';
+import RegistrationForm from "./components/RegistrationForm";
 import Home from "./components/Home";
 import React, {Component} from "react";
 import {
@@ -15,7 +17,7 @@ class App extends Component {
             <div className="App">
                 <Switch>
                     <Route history={history} exact path='/' component={Home} />
-                    <Route history={history} exact path='/form' component={Form} />
+                    <Route history={history} exact path='/form' component={RegistrationForm} />
                 </Switch>
             </div>
         );

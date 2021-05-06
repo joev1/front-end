@@ -7,7 +7,7 @@ class Home extends React.Component {
             <div className="App">
                 <h1>Hello World!</h1>
                 <Link className='myButton' to='/form'>
-                    <span>Registration</span>
+                    Registration
                 </Link>
             </div>
         );
